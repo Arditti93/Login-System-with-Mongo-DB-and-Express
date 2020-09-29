@@ -17,3 +17,6 @@
 - alex@email.com is a admin users so  when logged in the admin can update all users information 
 
 - Launches with `npm start`
+
+## Register 
+![WeatherApp Demo](register.gif)
