@@ -6,6 +6,10 @@
 
 - Users can register with a name, email and password; only if the email isn't taken in the database. 
 
+- app.post sends the user data to the mongo database 
+
+- if the user enters the wrong email or password when logging in, user is redirected back to the 
+
 - Once logged in users can update their details and log back in 
 
 - Users not logged in cannot access the profile or welcome pages. This is achived using authentication middleware 
