@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fakebook</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+body {
+    background-color: lightblue;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightblue;
+}
+.container{
+    padding: 10px;
+}
+nav{
+    background-color: lightgray;
+    padding: 10px 15px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li{
+    padding-left: 20px;
+    list-style: none;
+}
+.inputBox {
+    width: 35%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+} 
+
+.button {
+    font-size: large;
+    background-color: rgba(92, 89, 89, 0.4);
+    padding: 12px 20px;
+    border-radius:20px;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    border-bottom-style: hidden;
+}
+h4 {
+    font-size: x-large;
+    color: black;
+    list-style: none;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: solid;
+    padding-right: 15px;
+    border-bottom-style: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+h1 {
+    margin-left: 37px;
+    padding: 15px;
+}
+
+h2 {
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 4%;
+}
+.pageWrapper{
+        background-color: rgba(92, 89, 89, 0.4);
+        font-size: large;
+        margin-top: 40px;
+        border-radius:20px;
+        padding: 15px;
+        padding-left
+        width: 45%;
+        padding-bottom: 35px;
+}
+
+.textWrapper {
+    padding-bottom: 25px;
+    font-size: large;
+}
+.content {
+    padding: 15px;
+}
+
+input {
+    padding: 12px 20px;
+    border-radius:20px;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    border-bottom-style: hidden;
+}
+</style>
+<body>
+{{#each nUser}}
+        <nav>
+            <h1>Welcome {{this.name}}</h1>
+            <ul>
+                <li><a href = "/Welcome/{{this._id}}"><h4>Home</h4></a></li>
+                <li><a href = "/userProfile/{{this._id}}"><h4>Profile</h4></a></li>
+            </ul>
+        </nav>
+{{/each}}
+    <h2>Whats Going on today</h2>
+    <div = class="pageWrapper">
+        <div = class="content">
+            <h3>Alan Partridge</h3>
+            <P class="textWrapper">Found a cracking owl sanctuary today</P>
+            <img class="img" src="alan.jpg" alt="Smiley face" height="300" width="300"> 
+        </div>
+    </div>
+
+    <P class="pageWrapper">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti a nulla iusto quam, 
+        ut praesentium magnam quis aspernatur, omnis asperiores totam 
+        voluptates odit eos! Est reprehenderit vel repellat totam qui!</P>
+
+
+</body>
+</html>

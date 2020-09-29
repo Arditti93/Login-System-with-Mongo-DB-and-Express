@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Title</title>
+</head>
+<body>
+    <nav>
+        <h1>Welcome</h1>
+            <ul>
+                <li><a href = "/"><h4>Home</h4></a></li>
+                <li><a href = "/Register"><h4>Register</h4></a></li>
+                <li><a href = "/login"><h4>Login</h4></a></li>
+            </ul>
+    </nav>
+    <h2>Register User</h2>
+        <form class="pageWrapper" action="/getFormValues" method="POST">
+        <label>Enter a User Name</label>
+        <br>
+        <input class="inputBox" type="text" name="userNameForm" required>
+        <br>
+        <label>Enter a Email</label>
+        <br>
+        <input class="inputBox" type="email" name="userEmailForm">
+        <br>
+        <label>Enter a Password</label>
+        <br>
+        <input class="inputBox" type="password" name="userPasswordForm" required>
+        <br>
+        <label>Enter Password Again</label>
+        <br>
+        <input class="inputBox" type="password" name="userPasswordForm2" required>
+        <br>
+        <button class="button" type="submit">Register</button>
+    </form>
+</body>
+</html>

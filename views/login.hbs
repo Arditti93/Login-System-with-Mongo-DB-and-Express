@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Title</title>
+</head>
+<body>
+        <nav>
+        <h1>Welcome</h1>
+            <ul>
+                <li><a href = "/"><h4>Home</h4></a></li>
+                <li><a href = "/Register"><h4>Register</h4></a></li>
+                <li><a href = "/login"><h4>Login</h4></a></li>
+            </ul>
+    </nav>
+    <h2>Login In</h2>
+        <form class="pageWrapper" action="/login" method="POST">
+        <br>
+        <label>User Email</label>
+        <br>
+        <input class="inputBox" type="email" name="userEmail" required>
+        <br>
+        <lable>User Password</label>
+        <br>
+        <input class="inputBox" type="password" name="userPassword" required>
+        <br>
+        <button  class="button" name="submit" type="submit">Login</button>
+    </form>
+</body>
+</html>

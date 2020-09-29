@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakebook</title>
+</head>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+body {
+    background-color: lightblue;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightblue;
+}
+.container{
+    padding: 10px;
+}
+nav{
+    background-color: lightgray;
+    padding: 10px 15px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li{
+    padding-left: 20px;
+    list-style: none;
+}
+.inputBox {
+    width: 35%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+} 
+
+.button {
+    font-size: large;
+    background-color: rgba(92, 89, 89, 0.4);
+    padding: 12px 20px;
+    border-radius:20px;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    border-bottom-style: hidden;
+}
+h4 {
+    font-size: x-large;
+    color: black;
+    list-style: none;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: solid;
+    padding-right: 15px;
+    border-bottom-style: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+h1 {
+    margin-left: 37px;
+    padding: 15px;
+}
+
+.pageWrapper{
+        background-color: rgba(92, 89, 89, 0.4);
+        font-size: large;
+        margin-left: 37px; 
+        margin-top: 25px;
+        border-radius:20px;
+        padding: 15px;
+        width: 45%;
+        padding-bottom: 35px;
+        padding-right: -30%;
+}
+
+
+input {
+    padding: 12px 20px;
+    border-radius:20px;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+}
+</style>
+<body>
+    <nav>
+        {{#with parsedUser}}
+            <h1>Update Users</h1>
+            <ul>
+                <li><a href = "/"><h4>Home</h4></a></li>
+                <li><a href = "/adminProfile/{{this._id}}"><h4>Profile</h4></a></li>
+            </ul>
+        {{/with}}
+    </nav>
+
+    {{#each parsedUser}}
+        <form class="pageWrapper" action="/updateUser/{{this._id}}" method="POST">
+            <label>Update Name</label>
+            <br>
+            <input class="inputBox" type="text" name="updateNameForm" value="{{this.name}}" required>
+            <br>
+            <label>Update your email</label>
+            <br>
+            <input class="inputBox" type="email" name="updateEmailForm" value="{{this.email}}" required>
+            <br>
+            <label>Update your password</label>
+            <br>
+            <input class="inputBox" type="password" name="updatePasswordForm" required>
+            <br>
+            <button class="button">Update</button>
+        </form>
+    {{/each}}
+</body>
+</html>

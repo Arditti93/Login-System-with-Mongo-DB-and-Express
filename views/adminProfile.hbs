@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+body {
+    background-color: lightblue;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightblue;
+}
+.container{
+    padding: 10px;
+}
+nav{
+    background-color: lightgray;
+    padding: 10px 15px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li{
+    padding-left: 20px;
+    list-style: none;
+}
+
+.inputBox {
+    width: 35%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+} 
+
+.button {
+    font-size: large;
+    background-color: rgba(92, 89, 89, 0.4);
+    padding: 12px 20px;
+    border-radius:20px;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    border-bottom-style: hidden;
+}
+h4 {
+    font-size: x-large;
+    color: black;
+    list-style: none;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: solid;
+    padding-right: 15px;
+    border-bottom-style: hidden;
+}
+
+h3 {
+    font-size: x-large;
+    color: black;
+    list-style: none;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    padding-right: 15px;
+    border-bottom-style: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+h1 {
+    margin-left: 37px;
+    padding: 15px;
+}
+
+.pageWrapper{
+        text-decoration: none;
+        font-size: xx-large;
+        background-color: rgba(92, 89, 89, 0.4);
+        font-size: large;
+        margin-left: 37px; 
+        margin-top: 25px;
+        border-radius:20px;
+        padding: 15px;
+        width: 45%;
+        padding-bottom: 35px;
+        padding-right: -30%;
+}
+
+
+input {
+    padding: 12px 20px;
+    border-radius:20px;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    border-bottom-style: hidden;
+}
+li {
+    text-decoration: solid;
+    font-size: xx-large;
+}
+</style>
+<body>
+    <nav>
+        {{#with regUsers}}
+            <h1>Admin User</h1>
+            <ul>
+                <li><a href = "/"><h4>Home</h4></a></li>
+                <li><a href = "/adminProfile/{{this._id}}"><h4>Profile</h4></a></li>
+            </ul>
+        {{/with}}
+    </nav>
+        {{#each regUsers }}
+            <div class="pageWrapper">
+                <h3> Name: {{this.name}} </h3>
+                <h3>Email: {{this.email}} </h3>
+        
+                <form  class="pageWrapper" action="/delete/{{this.id}}" method="POST">
+                    <button class="button" name="deleteUser">Delete User
+                    </button>
+                </form>
+                <form class="pageWrapper" action="/update/{{this.id}}"method="GET">
+                    <button class="button" name="updateUser">update User
+                    </button>
+                </form> 
+            </div>
+     
+        {{/each}}
+                <form class="pageWrapper" action="/logout" method="POST">
+                <button class="button" type="submit" name="logoutButton">Log Me Out</button>
+                </form> 
+                
+    </ul>
+
+
+</body>
+</html>
