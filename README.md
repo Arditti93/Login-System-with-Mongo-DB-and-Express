@@ -19,4 +19,4 @@
 - Launches with `npm start`
 
 ## Register 
-![WeatherApp Demo](register.gif)
+![Register Demo](register.gif)
