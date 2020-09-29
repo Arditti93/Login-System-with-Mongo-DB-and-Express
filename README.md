@@ -11,3 +11,5 @@
 - Users not logged in cannot access the profile or welcome pages. This is achived using authentication middleware 
 
 - alex@email.com is a admin users so can update all users information 
+
+- Launches with 'npm start'
