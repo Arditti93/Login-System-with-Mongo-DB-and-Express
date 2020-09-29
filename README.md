@@ -4,7 +4,11 @@
 
 - A Mongo DB collection is created inisde the models folder called users
 
-- Users can register with a name, email and password; only if the email isn't taken in the database. 
+- Users can register with a name, email and password; only if the email isn't taken in the database.
+
+- User Passwords are hashed using bcrypt 
+
+- The databse url, port and json web tokens are hidden using a .env 
 
 - app.post sends the user data to the mongo database 
 
@@ -20,3 +24,14 @@
 
 ## Register 
 ![Register Demo](register.gif)
+
+## Login
+![Login Demo](login.gif)
+
+## Update 
+![Update Demo](update.gif)
+
+## Admin User 
+![Admin Demo](admin.gif)
+
+
