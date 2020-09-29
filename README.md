@@ -22,13 +22,13 @@
 
 - Launches with `npm start`
 
-## Register 
+## Register a User 
 ![Register Demo](register.gif)
 
-## Login
+## Login a user 
 ![Login Demo](login.gif)
 
-## Update 
+## Update a User 
 ![Update Demo](update.gif)
 
 ## Admin User 
