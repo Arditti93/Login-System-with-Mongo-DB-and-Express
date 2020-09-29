@@ -1,4 +1,4 @@
-# MongoDB
+# Login System with Mongo DB and Express
 
 ## An example MongoDB database and login system using node express js, handlebars and middleware cookies authentication.
 
